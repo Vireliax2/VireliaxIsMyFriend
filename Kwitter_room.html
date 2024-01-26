@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kwitter - Chat Rooms</title>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="kwitter_room.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="header">
+                    Kwitter<sup>                     w
+                    <img src="m2.png" alt="Kwitter Logo">
+                    </sup>
+                </h1>
+                <div class="user-section">
+                    <span id="username-display"></span>
+                    <button id="logout-button" class="btn btn-danger" onclick="logout()">Logout</button>
+                </div>
+                <div class="room-section">
+                    <h3>Create a Room</h3>
+                    <input type="text" placeholder="Room Name" id="room_name" class="form-control">
+                    <button id="add-room-button" class="btn btn-success" onclick="addRoom()">Add Room</button>
+                    <hr>
+                    <h3>Available Rooms</h3>
+                    <ul id="room-list" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="kwitter_room.js"></script>
+</body>
+</html>
